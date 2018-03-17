@@ -9,9 +9,6 @@ import deepstream.constant.CONNECTION_STATE as CS
 import deepstream.constant.CONNECTION_TRANSITION as CT
 import deepstream.util.*
 
-import kotlinx.serialization.*
-import kotlinx.serialization.json.JSON
-
 class Connection(private val services: Services, private val options: Options, url: String) : StateChangedListener<CS> {
     private var handlers: MutableMap<Byte, Handler>
 

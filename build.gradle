@@ -10,20 +10,16 @@ task wrapper(type: Wrapper) {
 
 buildscript {
     ext.kotlinVersion = '1.2.21'
-    ext.serializationVersion = "0.4.2"
 
     repositories {
         jcenter()
         mavenCentral()
         maven { url "https://plugins.gradle.org/m2/" }
-        maven { url "https://kotlin.bintray.com/kotlinx" }
     }
     dependencies {
         classpath "com.eriwen:gradle-js-plugin:2.14.1"
         classpath 'com.moowork.gradle:gradle-node-plugin:1.2.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
-        classpath "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$serializationVersion"
-        classpath "org.jetbrains.kotlinx:kotlinx-gradle-serialization-plugin:$serializationVersion"
     }
 }
 
@@ -32,7 +28,6 @@ ext {
     qunitVersion = '2.5.0'
     libraries = [
             junit: "junit:junit:4.12",
-            kotlinx_serialization: "org.jetbrains.kotlinx:kotlinx-gradle-serialization-plugin:$serializationVersion",
             kotlin_stdlib: "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion",
             kotlin_stdlib_common: "org.jetbrains.kotlin:kotlin-stdlib-common:$kotlinVersion",
             kotlin_stdlib_js: "org.jetbrains.kotlin:kotlin-stdlib-js:$kotlinVersion",

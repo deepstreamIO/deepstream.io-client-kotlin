@@ -1,16 +1,13 @@
 apply plugin: 'kotlin-platform-common'
-apply plugin: 'kotlinx-serialization'
 
 archivesBaseName = 'deepstream.io-kotlin-common'
 
 dependencies {
-    implementation libraries.kotlinx_serialization
     implementation libraries.kotlin_stdlib_common
     testImplementation libraries.kotlin_test_annotations_common
     testImplementation libraries.kotlin_test_common
 
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
-    compile "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$serializationVersion"
 }
 
 task sourcesJar(type: Jar) {
