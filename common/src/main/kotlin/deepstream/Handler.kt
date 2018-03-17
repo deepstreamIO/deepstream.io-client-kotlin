@@ -1,0 +1,5 @@
+package deepstream
+
+interface Handler {
+
+}

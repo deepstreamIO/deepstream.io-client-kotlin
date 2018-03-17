@@ -1,0 +1,5 @@
+rootProject.name = 'deepstream.io-client-kotlin'
+
+include ':common'
+include ':jvm'
+include ':js'
